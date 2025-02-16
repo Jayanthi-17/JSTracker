@@ -32,18 +32,35 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
-
-
 h1 {
     color: #333;
     background-color: #33bec1;
     border: 5px solid #2f3333;
     border-radius: 10px;
-    height:50px;
+    padding: 10px 20px;  /* Ensures better spacing */
     text-align: center;
-    justify-content: center;
+    display: inline-block; /* Prevents full-width stretching */
+    font-size: 1.8rem; /* Adjust size dynamically */
+    max-width: 90%; /* Ensures it doesn’t get too wide */
+    word-wrap: break-word; /* Prevents text overflow */
 }
+
+/* Responsive Fix */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+}
+
+
 
 input {
     width: 80%;
