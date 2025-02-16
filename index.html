@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Tracker System</h1>
+
+        <div class="section">
+            <h2>Add Employee</h2>
+            <input type="text" id="employeeName" placeholder="Enter Employee Name">
+            <input type="text" id="employeeDept" placeholder="Enter Department">
+            <!-- <button onclick="addEmployee()">Add Employee</button> -->
+            <button id="addEmployeeBtn" onclick="addEmployee(); triggerFlowerEffect('addEmployeeBtn')">Add Employee</button>
+            <p id="employeeMessage"></p>
+        </div>
+
+        <div class="section">
+            <h2>Mark Attendance</h2>
+            <input type="number" id="employeeId" placeholder="Enter Employee ID">
+            <button onclick="markAttendance()">Mark Attendance</button>
+                        <p id="attendanceMessage"></p>
+        </div>
+
+        <div class="section">
+            <h2>View Attendance</h2>
+            <button onclick="viewAttendance()">Show Attendance</button>
+            <ul id="attendanceList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>View Employees</h2>
+            <button onclick="viewEmployees()">Show Employees</button>
+            <ul id="employeeList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
